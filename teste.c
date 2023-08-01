@@ -1,15 +1,11 @@
 #include <stdio.h>
-
-typedef struct Students{
-    const char* name;
-    struct Students* prox;
-} Students;
+#include <stdlib.h>
 
 int main() {
-    Students st;
-    st.name = "ze";
-    st.prox = &st;
-    printf("%p", st.prox);
-    printf("\n%p", &st.prox);
+    int *p;
+    //p = malloc(sizeof(int) + 99999999999999999); Exploded the memory KEKW - don't do this
+    p = malloc(sizeof(int));
+    if(!p) printf("Error on memory allocation\n");
+    else printf("Memory allocation successfully on address: %p\n",p);
     return 0;
 }
