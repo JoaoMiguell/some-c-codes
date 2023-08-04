@@ -28,11 +28,22 @@ Person* pushBackLK(struct Person* lastPerson, const char* name) {
     return lastPerson;
 }
 
+void insertPos(struct Person* person, const char* name, int pos) {
+    for(int i=0; i != pos -1; i++) {
+        person = person->next;
+    }
+
+    Person* newPerson = malloc(sizeof(Person));
+    newPerson->name = name;
+    newPerson->next = person->next;
+    person->next = newPerson;
+}
+
 int main() {
     Person* person = malloc(sizeof(Person));
     person->name = "me";
     Person* last = gen(person);
     last = pushBackLK(last, "charizard");
-    printf(last->name);
+    insertPos(person,"pikachu", 3);
     return 0;
 }
