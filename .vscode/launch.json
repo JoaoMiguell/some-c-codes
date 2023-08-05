@@ -5,16 +5,16 @@
             "name": "C/C++ Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/linkedList.exe", // Substitua "seu_programa" pelo nome do arquivo executável do seu programa
-            "args": [], // Argumentos de linha de comando, se houverem
+            "preLaunchTask": "C gcc",
+            "program": "${workspaceFolder}/output/linkedList.exe",
+            "args": [],
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/output",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
             "miDebuggerPath": "C:\\msys64\\mingw64\\bin\\gdb.exe",
-            "setupCommands": [],
-            "preLaunchTask": "C/C++: gcc.exe build active file"
+            "setupCommands": []
         }
     ]
 }
